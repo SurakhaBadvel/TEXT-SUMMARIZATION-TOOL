@@ -1,0 +1,62 @@
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import textwrap
+model_name = "sshleifer/distilbart-cnn-12-6"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+def summarize_article(text):
+    # input for the model
+    inputs = tokenizer([text], max_length=1024, return_tensors='pt', truncation=True)
+
+    # summary using the model's generate method
+    summary_ids = model.generate(
+        inputs['input_ids'],
+        num_beams=4,
+        max_length=180,
+        min_length=60,
+        early_stopping=True
+    )
+
+    # Decode the generated summary
+    return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
+if __name__ == "__main__":
+    # Example long article (input)
+    article = """
+    Artificial Intelligence (AI) is one of the fastest-growing fields in
+    technology today.AI is widely used in industries like healthcare,
+    education, banking, transportation, entertainment, and cybersecurity.
+
+    Machine learning and deep learning are important branches of AI.
+    Machine learning allows systems to learn from data and improve their
+    performance automatically without explicit programming. Deep learning,
+    which is inspired by the structure of the human brain, has made major
+    breakthroughs in speech recognition, natural language processing,
+    robotics, and autonomous vehicles.
+
+    AI-powered applications such as chatbots, recommendation systems,
+    virtual assistants, and self-driving cars are becoming increasingly
+    common in daily life. Businesses use AI to analyze large amounts of
+    data, automate repetitive tasks, improve customer experiences, and
+    increase productivity.
+
+    Despite its many benefits, AI also creates challenges and ethical
+    concerns. Issues such as data privacy, algorithmic bias, job
+    displacement, and misuse of AI technologies are important topics of
+    discussion. Researchers and governments are working together to ensure
+    that AI systems are developed responsibly, transparently, and safely.
+
+    In the future, Artificial Intelligence is expected to continue
+    transforming society and driving innovation across many sectors of the
+    global economy.
+    """
+
+    print("\n📄 ORIGINAL TEXT:\n")
+    print(article)
+
+    # Generate summary
+    summary = summarize_article(article)
+    formatted_summary = textwrap.fill(summary, width=70)
+
+    print("\n✂️ SUMMARY:\n")
+    print(formatted_summary)
