@@ -12,7 +12,7 @@
 
 *MENTOR*: NEELA SANTOSH KUMAR
 
-## This project is a Text Summarization Tool created using Python and Hugging Face Transformers. The main objective of this project is to summarize long articles or paragraphs into short and meaningful content automatically using Artificial Intelligence (AI) and Natural Language Processing (NLP). This application helps users save time by providing the important points from lengthy text documents.
+This project is a Text Summarization Tool created using Python and Hugging Face Transformers. The main objective of this project is to summarize long articles or paragraphs into short and meaningful content automatically using Artificial Intelligence (AI) and Natural Language Processing (NLP). This application helps users save time by providing the important points from lengthy text documents.
 
 For developing this project, the main website and platform used is Google Colab. Google Colab is a cloud-based Python programming environment provided by Google Colab. It allows users to write and execute Python code directly in the browser without installing software on their computer. Google Colab is especially useful for AI and machine learning projects because it provides free GPU and CPU support, making model execution faster and easier.
 
