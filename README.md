@@ -34,3 +34,9 @@ This project has many practical applications in real life. Students can summariz
 Overall, this project demonstrates how modern AI and NLP technologies can simplify information processing. By using Google Colab and Hugging Face, developers can easily create powerful AI applications without requiring advanced hardware or deep expertise in machine learning.
 
 This text summarization project is very useful for reducing long articles into short and meaningful summaries. It helps users save time and quickly understand important information from large text documents. This tool can be used by students for studying notes, researchers for summarizing research papers, journalists for news articles, and businesses for report analysis. By using technologies like Python, Google Colab, and Hugging Face Transformers, the project demonstrates how Artificial Intelligence and Natural Language Processing can make information processing faster, easier, and more efficient in everyday life.
+
+## OUTPUT
+
+<img width="811" height="546" alt="Image" src="https://github.com/user-attachments/assets/09d23af6-b742-4434-a6a1-678f74fd27dd" />
+
+<img width="695" height="522" alt="Image" src="https://github.com/user-attachments/assets/30afb348-466a-4542-a78a-46a3d60ec67f" />
