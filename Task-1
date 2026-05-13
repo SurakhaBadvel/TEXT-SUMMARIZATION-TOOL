@@ -51,12 +51,12 @@ if __name__ == "__main__":
     global economy.
     """
 
-    print("\n📄 ORIGINAL TEXT:\n")
+    print("\n ===ORIGINAL TEXT===\n")
     print(article)
 
     # Generate summary
     summary = summarize_article(article)
     formatted_summary = textwrap.fill(summary, width=70)
 
-    print("\n✂️ SUMMARY:\n")
+    print("\n ===SUMMARY===\n")
     print(formatted_summary)
